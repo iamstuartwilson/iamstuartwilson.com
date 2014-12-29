@@ -1,0 +1,33 @@
+{
+  "name": "iamstuartwilson",
+  "version": "0.0.1",
+  "description": "iamstuartwilson.com website repo",
+  "main": "iamstuartwilson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node iamstuartwilson.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamstuartwilson/iamstuartwilson.com.git"
+  },
+  "author": "iamstuartwilson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iamstuartwilson/iamstuartwilson.com/issues"
+  },
+  "homepage": "https://github.com/iamstuartwilson/iamstuartwilson.com",
+  "dependencies": {
+    "bootstrap": "^3.3.1",
+    "express": "^4.10.6",
+    "express3-handlebars": "^0.5.2",
+    "font-awesome": "^4.2.0",
+    "node-markdown": "^0.1.1",
+    "serve-favicon": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-less-sourcemap": "^1.3.3",
+    "gulp-util": "^3.0.1"
+  }
+}

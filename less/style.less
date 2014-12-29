@@ -1,0 +1,99 @@
+@libPath: '../node_modules/';
+@bootstrapPath: '@{libPath}bootstrap/';
+@fontAwesomePath: '@{libPath}font-awesome/';
+
+// Bootstrap Core
+@import '@{bootstrapPath}less/variables';
+@import '@{bootstrapPath}less/mixins';
+@import '@{bootstrapPath}less/normalize';
+@import '@{bootstrapPath}less/print';
+@import '@{bootstrapPath}less/scaffolding';
+@import '@{bootstrapPath}less/type';
+@import '@{bootstrapPath}less/code';
+@import '@{bootstrapPath}less/grid';
+@import '@{bootstrapPath}less/tables';
+@import '@{bootstrapPath}less/forms';
+@import '@{bootstrapPath}less/buttons';
+
+@import '@{fontAwesomePath}less/font-awesome';
+
+@grey: #333;
+@grey-light: #999;
+@grey-lighter: #ccc;
+@red: #d02121;
+
+.link-colour(@colour: @red) {
+    color: @colour;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @colour;
+    }
+}
+
+body {
+    font-family: Lato, @font-family-sans-serif;
+    font-weight: 300;
+    color: @grey;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+a {
+    .link-colour;
+}
+
+img {
+    .img-responsive;
+    display: inline-block;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-light {
+    .link-colour(@grey-light);
+
+    a {
+        .link-colour(@grey-light);
+    }
+}
+
+.text-lighter {
+    .link-colour(@grey-lighter);
+
+    a {
+        .link-colour(@grey-lighter);
+    }
+}
+
+.text-smaller {
+    font-size: .75em;
+}
+
+.page-heading {
+    .text-uppercase;
+    .text-bold;
+
+    img {
+        width: .9em;
+        vertical-align: -.07em;
+    }
+}
+
+@media(max-width: @screen-xs) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.2em;
+    }
+}
