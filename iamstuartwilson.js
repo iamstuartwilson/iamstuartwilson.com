@@ -14,7 +14,7 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 // Set port, default to 3000 if not pre-set
-app.set('port', process.env.port || 3000);
+app.set('port', process.env.PORT || 3000);
 
 // Static files
 app.use(express.static(__dirname + '/public'));
