@@ -4275,6 +4275,17 @@ a:focus,
 a:active {
   color: #4a74a7;
 }
+a.link-inherit {
+  color: inherit;
+}
+a.link-inherit:hover,
+a.link-inherit:focus,
+a.link-inherit:active {
+  color: inherit;
+}
+a.no-underline {
+  text-decoration: none !important;
+}
 img {
   display: block;
   max-width: 100%;
@@ -4286,6 +4297,9 @@ header {
 }
 .buffer {
   margin: 1.5em 0 !important;
+}
+.margin-reset {
+  margin: 0 !important;
 }
 .text-uppercase {
   text-transform: uppercase;
@@ -4325,19 +4339,41 @@ header {
 .text-lighter a:active {
   color: #cccccc;
 }
+.text-larger {
+  font-size: 1.2em;
+}
 .text-smaller {
   font-size: .8em;
 }
-.page-heading {
-  font-size: 1.2em;
-  font-weight: 700;
-}
-.page-heading img {
+.text-icon {
   width: .9em;
   vertical-align: -0.07em;
 }
 .text-theme {
   color: #4a74a7;
+}
+.text-sans-serif {
+  font-family: Source Sans Pro, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.markdown em {
+  color: #999999;
+  font-style: normal;
+}
+.markdown em:hover,
+.markdown em:focus,
+.markdown em:active {
+  color: #999999;
+}
+.markdown em a {
+  color: #999999;
+}
+.markdown em a:hover,
+.markdown em a:focus,
+.markdown em a:active {
+  color: #999999;
 }
 @media (max-width: 480px) {
   body {

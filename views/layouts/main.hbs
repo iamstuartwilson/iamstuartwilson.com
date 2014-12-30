@@ -6,26 +6,29 @@
 
         <title>
         {{#if title}}
-            {{title}}
-        {{else}}
-            Stuart Wilson | Front End Developer | iamstuartwilson.com
+            {{title}} |
         {{/if}}
+        Stuart Wilson | iamstuartwilson.com
         </title>
 
-        <link href='//fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Domine:400,700|Source+Sans+Pro:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     </head>
     <body>
         {{> header}}
 
-        <div class="container">
+        {{#if pageBorder}}
+            <hr class="margin-reset">
+        {{/if}}
+
+        <section class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     {{{body}}}
                 </div>
             </div>
-        </div>
+        </section>
 
         {{> footer}}
     </body>

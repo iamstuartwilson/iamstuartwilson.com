@@ -73,6 +73,14 @@ p, ul, ol , hr{
 
 a {
     .link-colour;
+
+    &.link-inherit {
+        .link-colour(inherit);
+    }
+
+    &.no-underline {
+        text-decoration: none !important;
+    }
 }
 
 img {
@@ -86,6 +94,10 @@ header {
 
 .buffer {
     margin: 1.5em 0 !important;
+}
+
+.margin-reset {
+    margin: 0 !important;
 }
 
 .text-uppercase {
@@ -112,22 +124,37 @@ header {
     }
 }
 
+.text-larger {
+    font-size: 1.2em;
+}
+
 .text-smaller {
     font-size: .8em;
 }
 
-.page-heading {
-    font-size: 1.2em;
-    .text-bold;
-
-    img {
-        width: .9em;
-        vertical-align: -.07em;
-    }
+.text-icon{
+    width: .9em;
+    vertical-align: -.07em;
 }
 
 .text-theme {
     color: @theme-colour;
+}
+
+.text-sans-serif {
+    font-family: Source Sans Pro, @font-family-sans-serif;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.markdown {
+
+    em {
+        .text-light;
+        font-style: normal;
+    }
 }
 
 @media(max-width: @screen-xs) {

@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
 
 // Routing
-markdownRouter(__dirname + '/pages', app);
+app.use(markdownRouter(__dirname + '/pages'));
 
 // Error handlers
 app.use(function(req, res) {
