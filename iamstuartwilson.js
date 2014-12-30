@@ -3,8 +3,6 @@ var exphbs = require('express-handlebars');
 var markdownRouter = require('./lib/markdown-router');
 var favicon = require('serve-favicon');
 
-require('./config');
-
 // Create app
 var app = express();
 
