@@ -14,15 +14,20 @@
 @import '@{bootstrapPath}less/tables';
 @import '@{bootstrapPath}less/forms';
 @import '@{bootstrapPath}less/buttons';
+@import '@{bootstrapPath}less/utilities';
 
 @import '@{fontAwesomePath}less/font-awesome';
 
+@white: #fff;
+@black: #000;
 @grey: #333;
 @grey-light: #999;
 @grey-lighter: #ccc;
-@red: #d02121;
+@grey-lightest: #eee;
 
-.link-colour(@colour: @red) {
+@theme-colour: #4a74a7;
+
+.link-colour(@colour: @theme-colour) {
     color: @colour;
 
     &:hover,
@@ -33,16 +38,37 @@
 }
 
 body {
-    font-family: Lato, @font-family-sans-serif;
-    font-weight: 300;
     color: @grey;
-    font-size: 20px;
+    font-family: Domine, @font-family-serif;
+    font-weight: 400;
+    font-size: 18px;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-size: 1.5em;
     line-height: 1.2;
-    font-weight: 500;
+    margin: 1em 0;
+    .text-bold;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+hr {
+    border-color: @grey-lightest;
+}
+
+p, ul, ol , hr{
+    margin: 1em 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 a {
@@ -54,12 +80,20 @@ img {
     display: inline-block;
 }
 
+header {
+    border-top: solid @theme-colour 4px;
+}
+
+.buffer {
+    margin: 1.5em 0 !important;
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
 
 .text-bold {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .text-light {
@@ -79,11 +113,11 @@ img {
 }
 
 .text-smaller {
-    font-size: .75em;
+    font-size: .8em;
 }
 
 .page-heading {
-    .text-uppercase;
+    font-size: 1.2em;
     .text-bold;
 
     img {
@@ -92,8 +126,12 @@ img {
     }
 }
 
+.text-theme {
+    color: @theme-colour;
+}
+
 @media(max-width: @screen-xs) {
-    h1, h2, h3, h4, h5, h6 {
-        font-size: 1.2em;
+    body {
+        font-size: 16px;
     }
 }

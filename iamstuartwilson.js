@@ -1,7 +1,9 @@
 var express = require('express');
-var exphbs = require('express3-handlebars');
-var pageParser = require('./lib/page-parser');
+var exphbs = require('express-handlebars');
+var markdownRouter = require('./lib/markdown-router');
 var favicon = require('serve-favicon');
+
+require('./config');
 
 // Create app
 var app = express();
@@ -11,6 +13,7 @@ app.engine('.hbs', exphbs({
     extname: '.hbs',
     defaultLayout: 'main'
 }));
+
 app.set('view engine', '.hbs');
 
 // Set port, default to 3000 if not pre-set
@@ -23,16 +26,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
 
 // Routing
-
-pageParser.dir(__dirname + '/pages');
-
-app.get('/', function(req, res) {
-    pageParser.parse('index', function(content) {
-        res.render('index', {
-            content: content
-        });
-    });
-});
+markdownRouter(__dirname + '/pages', app);
 
 // Error handlers
 app.use(function(req, res) {
@@ -40,6 +34,7 @@ app.use(function(req, res) {
     res.render('404');
 });
 
+// App setup
 app.listen(app.get('port'), function() {
     console.log('Server started on port', app.get('port'));
 });

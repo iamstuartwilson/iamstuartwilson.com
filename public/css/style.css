@@ -2497,6 +2497,63 @@ input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
 }
+.clearfix:before,
+.clearfix:after,
+.dl-horizontal dd:before,
+.dl-horizontal dd:after,
+.container:before,
+.container:after,
+.container-fluid:before,
+.container-fluid:after,
+.row:before,
+.row:after,
+.form-horizontal .form-group:before,
+.form-horizontal .form-group:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.dl-horizontal dd:after,
+.container:after,
+.container-fluid:after,
+.row:after,
+.form-horizontal .form-group:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.affix {
+  position: fixed;
+}
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -4170,10 +4227,10 @@ input[type="button"].btn-block {
   content: "\f20c";
 }
 body {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
   color: #333333;
-  font-size: 20px;
+  font-family: Domine, Georgia, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 h1,
 h2,
@@ -4183,15 +4240,40 @@ h5,
 h6 {
   font-size: 1.5em;
   line-height: 1.2;
-  font-weight: 500;
+  margin: 1em 0;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2em;
+}
+hr {
+  border-color: #eeeeee;
+}
+p,
+ul,
+ol,
+hr {
+  margin: 1em 0;
+}
+p:first-child,
+ul:first-child,
+ol:first-child,
+hr:first-child {
+  margin-top: 0;
+}
+p:last-child,
+ul:last-child,
+ol:last-child,
+hr:last-child {
+  margin-bottom: 0;
 }
 a {
-  color: #d02121;
+  color: #4a74a7;
 }
 a:hover,
 a:focus,
 a:active {
-  color: #d02121;
+  color: #4a74a7;
 }
 img {
   display: block;
@@ -4199,11 +4281,17 @@ img {
   height: auto;
   display: inline-block;
 }
+header {
+  border-top: solid #4a74a7 4px;
+}
+.buffer {
+  margin: 1.5em 0 !important;
+}
 .text-uppercase {
   text-transform: uppercase;
 }
 .text-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 .text-light {
   color: #999999;
@@ -4238,24 +4326,22 @@ img {
   color: #cccccc;
 }
 .text-smaller {
-  font-size: .75em;
+  font-size: .8em;
 }
 .page-heading {
-  text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 700;
 }
 .page-heading img {
   width: .9em;
   vertical-align: -0.07em;
 }
+.text-theme {
+  color: #4a74a7;
+}
 @media (max-width: 480px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1.2em;
+  body {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */

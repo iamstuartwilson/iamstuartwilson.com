@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stuart Wilson | Front End Developer | iamstuartwilson.com</title>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <h1 class="page-heading"><img src="/img/bolt-icon.svg" alt="yes"> <span class="text-lighter">i am</span> stuart wilson</h1>
-                <hr>
-                {{{body}}}
-                <hr>
-                <ul class="list-inline text-smaller text-light">
-                    <li><a href="https://github.com/iamstuartwilson"><i class="fa fa-github"></i> github</a></li>
-                    <li><a href="https://uk.linkedin.com/pub/stuart-wilson/86/1aa/a24"><i class="fa fa-linkedin"></i> linkedin</a></li>
-                    <li><a href="https://twitter.com/iamstuartwilson"><i class="fa fa-twitter"></i> twitter</a></li>
-                    <li><a href="http://www.strava.com/athletes/318175"><i class="fa fa-trophy"></i> strava</a></li>
-                </ul>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+        {{#if title}}
+            {{title}}
+        {{else}}
+            Stuart Wilson | Front End Developer | iamstuartwilson.com
+        {{/if}}
+        </title>
+
+        <link href='http://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+        {{> header}}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    {{{body}}}
+                </div>
             </div>
         </div>
-    </div>
-</body>
+
+        {{> footer}}
+    </body>
 </html>

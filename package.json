@@ -20,7 +20,7 @@
   "dependencies": {
     "bootstrap": "^3.3.1",
     "express": "^4.10.6",
-    "express3-handlebars": "^0.5.2",
+    "express-handlebars": "^1.0",
     "font-awesome": "^4.2.0",
     "node-markdown": "^0.1.1",
     "serve-favicon": "^2.2.0"
