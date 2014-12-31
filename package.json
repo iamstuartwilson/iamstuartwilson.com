@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node iamstuartwilson.js",
-    "postinstall": "./node_modules/.bin/gulp build"
+    "postinstall": "node ./node_modules/gulp/bin/gulp.js build"
   },
   "repository": {
     "type": "git",
