@@ -1,7 +1,7 @@
-@{"title": "Work", "pageBorder": true}
+@{"title": "Wørk", "pageBorder": true}
 
-#Work
-*Here's some of the things I've been working on lately...*
+#Recent Work
+*Below is a selection of personal and professional things I've worked on in the last year*
 
 &nbsp;
 

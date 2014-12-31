@@ -1,0 +1,11 @@
+// Mixin extensions
+
+.link-colour(@colour: @theme-colour) {
+    color: @colour;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @colour;
+    }
+}

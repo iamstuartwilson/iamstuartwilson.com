@@ -1,0 +1,132 @@
+// Typography
+
+body {
+    color: @grey;
+    font-family: Lato, @font-family-sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    margin: 1em 0;
+    .text-bold;
+    .text-serif;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 1em 0 .5em 0;
+}
+
+hr {
+    border-color: @grey-lightest;
+}
+
+p, ul, ol , hr{
+    margin: 1em 0;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a {
+    .link-colour;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.link-inherit {
+    .link-colour(inherit);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.text-light {
+    .link-colour(@grey-light);
+
+    a {
+        .link-colour(@grey-light);
+    }
+}
+
+.text-lighter {
+    .link-colour(@grey-lighter);
+
+    a {
+        .link-colour(@grey-lighter);
+    }
+}
+
+.text-larger {
+    font-size: 1.2em;
+}
+
+.text-smaller {
+    font-size: .8em;
+}
+
+.text-icon{
+    width: .9em;
+    vertical-align: -.07em;
+}
+
+.text-theme {
+    color: @theme-colour;
+}
+
+.text-serif {
+    font-family: Domine, @font-family-serif;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-buffer {
+    line-height: 2em;
+}
+
+.logo {
+    .text-serif;
+    .link-inherit;
+    .no-underline;
+    .text-bold;
+}
+
+.text-nav {
+    .text-light;
+    .text-uppercase;
+    .text-smaller;
+    .text-buffer;
+    .pull-right;
+    .no-underline;
+}
+
+.markdown {
+
+    em {
+        .text-light;
+        font-style: normal;
+    }
+}
+
+@media(max-width: @screen-xs) {
+    body {
+        font-size: 16px;
+    }
+}
