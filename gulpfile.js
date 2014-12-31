@@ -2,6 +2,9 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var less = require('gulp-less-sourcemap');
 var fs = require('fs');
+var minifyCSS = require('gulp-minify-css');
+
+var moveFonts = require('./build/fonts');
 
 var mappings = {
     dir: './less/**/*.less',
@@ -15,28 +18,10 @@ function buildLess(mappings) {
     .on('error', function (error) {
         gutil.log(gutil.colors.red(error.message))
     })
+    .pipe(minifyCSS())
     .pipe(gulp.dest(mappings.dest));
 
     gutil.log('Compiling CSS:', gutil.colors.cyan(mappings.main));
-}
-
-function moveFonts() {
-    var dir = {
-            src: './node_modules/font-awesome/fonts',
-            dest: './public/fonts'
-        };
-
-    if(! fs.existsSync(dir.dest)) {
-        fs.mkdir(dir.dest);
-    }
-
-    fs.readdir(dir.src, function(err, files){
-
-        files.forEach(function(file) {
-            fs.createReadStream(dir.src + '/' + file).pipe(fs.createWriteStream(dir.dest + '/' + file));
-        });
-
-    });
 }
 
 gulp.task('less:watch', function() {
@@ -50,7 +35,7 @@ gulp.task('less:build', function() {
 });
 
 gulp.task('fonts:move', function() {
-    moveFonts();
+    moveFonts(__dirname);
 });
 
 gulp.task('watch', ['less:watch']);
