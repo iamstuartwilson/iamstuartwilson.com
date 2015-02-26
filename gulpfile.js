@@ -39,6 +39,7 @@ gulp.task('less:build', function() {
 
 // Moves required fonts to public dir from node_modules
 gulp.task('fonts:move', function() {
+    // This is shit
     var dir = {
             src: './node_modules/font-awesome/fonts',
             dest: './public/fonts'
@@ -49,11 +50,9 @@ gulp.task('fonts:move', function() {
     }
 
     fs.readdir(dir.src, function(err, files){
-
         files.forEach(function(file) {
             fs.createReadStream(dir.src + '/' + file).pipe(fs.createWriteStream(dir.dest + '/' + file));
         });
-
     });
 });
 
@@ -62,4 +61,3 @@ gulp.task('watch', ['less:watch']);
 
 // Gulp build task (run on app deployment)
 gulp.task('build', ['less:build', 'fonts:move']);
-
